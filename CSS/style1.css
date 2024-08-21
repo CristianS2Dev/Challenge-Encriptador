@@ -8,8 +8,8 @@
     --color-texto-claro: #495057;
     --color-texto-oscuro: #343a40;
     --tipografia: 'Montserrat', sans-serif;
-    --Degradado: linear-gradient(180deg, #20beea, #0b4edd);
-    --Degradado2: linear-gradient(180deg, #0b4edd, #20beea);
+    --Degradado: linear-gradient(180deg, #020202, #0b4edd);
+    --Degradado2: linear-gradient(180deg, #020202, #0b4edd);
 }
 
 *{
@@ -18,11 +18,13 @@
 
 }
 
+
 .contenedor{
     position: relative;
     width: 100vw;
     height: 100vh;
     background-color: #ffffff;
+
 }
 
 .imagenAlura{
@@ -34,6 +36,18 @@
     align-items: flex-start;
     gap: 40px;
     flex-shrink: 0;
+    animation: rotar 5s linear infinite;
+    position: absolute;
+    filter: drop-shadow(0px 4px 4px rgba(60, 131, 230, 0.25));
+}
+
+@keyframes rotar{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
 }
 .texto1{
     position: absolute;
@@ -43,7 +57,7 @@
     top: 15%;
     border: none;
     font-family: var(--tipografia);
-    font-style: normal;
+    font-style: bold;
     font-weight: 400;
     font-size: 32px;
     line-height: 150%;
@@ -125,7 +139,7 @@
     gap: 8px;
     width: 25%;
     background-image: var(--Degradado2);
-    border: 1px solid var(--color-primario);
+    border: 2px solid var(--color-primario);
     border-radius: 24px;
     font-family: var(--tipografia);
     font-weight: 400;
